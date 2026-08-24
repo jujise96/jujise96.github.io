@@ -15,6 +15,7 @@
 <br>
 
 # 💻 Tech Stack:
+<img width="498" height="278" alt="lnhuXTf" src="https://github.com/user-attachments/assets/42896be7-a238-4c28-83e4-4c392071e0d6" />
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
