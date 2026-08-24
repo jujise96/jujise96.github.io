@@ -100,13 +100,5 @@
 
 <br><br>
 
-# 📊 GitHub Stats:
-<div align="center" style="margin-left: 30px; margin-right: 30px;">
-  <br><br>
-  <img src="https://nirzak-streak-stats.vercel.app/?user=jujise96&theme=dark&hide_border=false" alt="GitHub Streak">
-  <br><br>
-</div>
-
-<br><br>
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
