@@ -410,13 +410,24 @@ function changeLanguage(lang) {
     // Cerrar el desplegable después de seleccionar
     const dropdown = document.querySelector('.language-dropdown');
     if (dropdown) dropdown.classList.remove('active');
+
+    // Actualiza también los enlaces de descarga que tengan versión por idioma
+    document.querySelectorAll(`[data-href-${lang}]`).forEach(el => {
+    el.setAttribute('href', el.getAttribute(`data-href-${lang}`));
+  });
 }
 
 // Inicializar sistema de idiomas
 function initLanguageSystem() {
     console.log('Inicializando sistema de idiomas');
 
-    const savedLang = localStorage.getItem('preferred-language') || 'es';
+    let savedLang = localStorage.getItem('preferred-language');
+
+    if (!savedLang) {
+        // Primera visita: nadie ha elegido idioma todavía → detectar por navegador
+        const browserLang = navigator.language.slice(0, 2);
+        savedLang = browserLang === 'es' ? 'es' : 'en';
+    }
 
     // Event listener para el botón del desplegable
     const dropdownBtn = document.querySelector('.dropdown-btn');
@@ -435,7 +446,7 @@ function initLanguageSystem() {
         }
     };
 
-    // Aplicar idioma guardado
+    // Aplicar idioma detectado o guardado
     changeLanguage(savedLang);
 }
 
